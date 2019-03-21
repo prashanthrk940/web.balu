@@ -9,7 +9,6 @@
     ])
 
     stage('Checkout') {
-      git branch: 'Dev', url: 'https://github.com/Balu423/Web.git'
       git branch: 'Dev', poll: true, url: 'https://github.com/Balu423/Web.git'
     }
 
