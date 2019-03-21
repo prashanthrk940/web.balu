@@ -10,7 +10,7 @@
 
     stage('Checkout') {
       git branch: 'Dev', url: 'https://github.com/Balu423/Web.git'
-      echo 'Pulling...' + env.BRANCH_NAME
+      git branch: 'Dev', poll: true, url: 'https://github.com/Balu423/Web.git'
     }
 
     stage('Build') {
