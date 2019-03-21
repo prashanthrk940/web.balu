@@ -9,11 +9,11 @@
     ])
 
     stage('Checkout') {
-      git 'https://github.com/Balu423/Web.git'
+      git branch: 'Dev', url: 'https://github.com/Balu423/Web.git'
       echo 'Pulling...' + env.BRANCH_NAME
     }
 
     stage('Build') {
         sh 'mvn clean package'
     }
-  }
+}
